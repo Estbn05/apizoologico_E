@@ -1,0 +1,23 @@
+{
+  "name": "apizoologico_e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Estbn05/apizoologico_E.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Estbn05/apizoologico_E/issues"
+  },
+  "homepage": "https://github.com/Estbn05/apizoologico_E#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
