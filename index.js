@@ -13,9 +13,9 @@ const app = express()
 const port = 3000
 
 app.get('/',(req,res) =>{ //request y response
-    res.send('Hola Mundo') //usamos el request cuando necesitamos jalar cualquier tipo de informacion 
+    res.send('Hola Mundo spy estebitan') //usamos el request cuando necesitamos jalar cualquier tipo de informacion 
 })
 
 app.listen(port, () =>{
-    console.log('la app se esta ejecutando')
+    console.log('la app se esta ejecutando por el puerto '+`${port}`)
 })
