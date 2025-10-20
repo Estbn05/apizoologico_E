@@ -10,8 +10,9 @@ router.post("/animalitos", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+//consultar animales con condicion
 router.get("/animals", (req, res) => {
-    animalSchema.find()
+    animalSchema.find({edad:{$gt:4}})
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
@@ -26,6 +27,32 @@ router.get("/animals/:id", (req, res) => {
 
 });
 
+
+//Modificar el nombre de un animal por su id
+router.put("/animals/:id", (req, res) => {
+    const { id } = req.params;
+    const { nombre, edad, tipo, fecha } = req.body;
+    animalSchema
+        .updateOne({ _id: id }, {
+            $set: { nombre, edad, tipo, fecha }
+        })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+
+});
+
+//Eliminar un animal por su id
+router.delete("/animals/:id", (req, res) => {
+  const { id } = req.params;
+  animalSchema
+    .findByIdAndDelete(id)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.json({ message: error });
+    });
+});
 
 
 module.exports = router;
