@@ -10,6 +10,13 @@ router.post("/animalitos", (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+//consultar animales sin condicion
+router.get("/animals", (req, res) => {
+    animalSchema.find({})
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
+
 //consultar animales con condicion
 router.get("/animals", (req, res) => {
     animalSchema.find({edad:{$gt:4}})
