@@ -3,7 +3,7 @@ const router = express.Router(); //manejador de rutas de express
 const animalSchema = require("../models/animalModel");
 
 //Nuevo animal
-router.post("/animalitos", (req, res) => {
+router.post("/animals", (req, res) => {
     const animal = animalSchema(req.body);
     animal
         .save()
