@@ -1,0 +1,1 @@
+MONGODB_URI =mongodb+srv://Estbn05:lSjYFMZCUguX3FC5@ntd-bd.yeipebx.mongodb.net/?retryWrites=true&w=majority&appName=NTD-BD
